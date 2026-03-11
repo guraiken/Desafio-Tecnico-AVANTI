@@ -62,7 +62,7 @@ function App() {
             
             <div className='user-info'>
               <h2>{userInfo.name || userInfo.login}</h2>
-              <p>{userInfo.bio}</p>
+              <p>{userInfo.bio || 'Este usuário não possui uma bio.'}</p>
             </div>
           </div>
         )}
