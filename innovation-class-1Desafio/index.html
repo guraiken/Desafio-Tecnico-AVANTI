@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- style é necessario aqui para poder estilizar a paginação do swiper -->
+    <style>
+        .swiper {
+            visibility: visible !important;
+        }
+
+        .swiper-pagination {
+            bottom: 8px !important;
+        }
+        .swiper-pagination-bullet {
+            background: #838383 !important;
+            opacity: 1 !important;
+            width: 8px !important;
+            height: 8px !important;
+            margin: 0 5px !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #303030 !important;
+            width: 8px !important;
+        }
+        .swiper-button-prev, .swiper-button-next {
+            position: absolute;
+            color: transparent;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .swiper-button-prev {
+            left: -20px !important
+        }
+        .swiper-button-next{
+            right: -26px !important
+        }
+
+    </style>
+    <title>Innovation Class</title>
+</head>
+<body class="font-['Nunito_Sans']">
+    
+    <header class="w-full mx-auto min-h-[120px] bg-white drop-shadow-sm">
+        <div class="text-[14px] text-center bg-[#005cff] text-[#FFFFFF] p-[6px] font-semibold">
+            <p>Ganhe <a class="bg-[#6220C1] rounded-[6px] px-[4px]">R$10,00</a> de desconto no seu primeiro pedido. Utilize o cupom <i class="font-normal">DESCONTO10</i></p>
+        </div>
+
+        <section class="max-w-[1200px] mx-auto p-[20px] flex justify-between items-center">
+            <div class="flex gap-[60px] items-center w-full flex-1 min-w-0">
+                <div class="logo">
+                    <img src="./assets/svg/AVANTI-logo.svg" alt="Logo">
+                </div>
+                <div class="flex items-center gap-[10px] p-[12px] w-full max-w-[600px] border border-[#dddddd] rounded-[12px]">
+                    <input type="text" placeholder="Digite aqui o que você procura" class="border-none outline-none flex-1 px-[10px] w-[94%] placeholder-black max-h-[20px]">
+                    <img src="./assets/svg/search.svg" alt="">
+                </div>
+                
+            </div>
+            <div class="flex justify-end gap-[16px] flex items-center leading-[1]">
+                <img src="./assets/svg/noun-person.svg" alt="">
+                <div class="flex flex-col">
+                    <p>Olá,</p>
+                    <p>Nome cliente!</p>
+                </div>
+                <div class="px-[10px]">
+                    <img src="./assets/svg/cart.svg" alt="">
+                </div>
+            </div>
+        </section>
+            
+        <nav class="w-full bg-white"> <div class="max-w-[1200px] mx-auto px-[20px] py-[12px]">
+        <ul class="flex justify-start items-center gap-[30px] text-[14px] font-semibold text-[#000000]">
+            <li>
+                <a href="#" class="flex items-center hover:text-[#005cff] transition-colors font-extrabold gap-[6px]">
+                    <strong>☰</strong> Todas as Categorias
+                </a>
+            </li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+            <li><a href="#" class="hover:text-[#005cff] transition-colors">Departamento</a></li>
+        </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="banner-sale w-full bg-[#E7E7EA] ">
+            <div class="md:max-w-[1200px] mx-auto md:px-[20px] flex object-cover md:flex-row items-center justify-center gap-[20px] md:gap-[20px] md: justify-start">
+                <img src="./assets/Images/cadeira-sale.png" alt="Cadeira com roupas" class="w-full max-w-[500px] hidden md:block">
+                <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-full max-w-[300px] block md:hidden">
+            
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="flex flex-col text-black leading-[0.9] md:flex-row">
+                        <span class="text-[60px] md:text-[85px] font-black">SUPER</span>
+                        <span class="text-[60px] md:text-[85px] font-light">SALE</span>
+                    </h1>
+                    <p class="text-[14px] md:text-[16px] font-bold text-[#005cff] tracking-[0.15em] mt-[30px] mb-[15px] md:hidden">
+                        SELECTED ITEMS UP TO
+                    </p>
+                    <p class="text-[14px] md:text-[16px] font-bold text-[#005cff] tracking-[0.5em] mt-[30px] mb-[15px] hidden md:block font-extrabold">
+                        ITENS SELECIONADOS COM ATÉ
+                    </p>
+                    <p class="text-[60px] md:text-[60px] font-bold text-[#005cff] leading-none">
+                        50%OFF
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- AQUI SÃO OS CARDS E SWIPER -->
+        <section class="produtos py-[40px]">
+            <div class="max-w-[1300px] mx-auto px-[20px]">
+
+                <div class="flex justify-between items-center mt-[24px]">
+                    <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
+                    <a href="#" class="text-[14px] color-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
+                </div>
+        
+                <div class="relative w-full max-w-[1300px] mx-auto">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="card-container">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination !-bottom-8">
+        
+                    </div>
+                    <div class="swiper-button-prev cursor-pointer">
+                        <img src="./assets/svg/previous-arrow.svg" alt="">
+                    </div>
+
+                    <div class="swiper-button-next cursor-pointer">
+                        <img src="./assets/svg/next-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- caneca do site  -->
+        <section class="destaque py-[80px] min-h-[720px] pb-12">
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center">
+                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center min-h-[740px]">
+                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px]">
+                </div>
+                <div class="w-full md:w-1/2 bg-[#FFFFFF] px-[24px] flex flex-col gap-[20px] py-[14px]">
+                    <h1 class="font-bold text-[24px] md:text-[30px]">LOREM IPSUM</h1>
+                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- não esquecer da responsividade depois -->
+        <section class="destaque-caracteristicas py-[40px] bg-[#DEDEDE]">
+            <div class="max-w-[1200px] mx-auto flex justify-center items-center px-[20px] flex-col md:flex-row gap-[10px]">
+                <div class="w-full md:w-1/2 flex flex-col items-center justify-center gap-[20px]">
+                    <h1 class="font-bold text-[#4F4F4F] text-[30px] tracking-wider py-[20px] text-center pl-[40px]">LOREM IPSUM</h1>
+
+                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]">
+                        <img src="./assets/svg/circulo-icone.svg" alt="">
+                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> 
+                    </div>
+
+                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]"> 
+                        <img src="./assets/svg/circulo-icone.svg" alt="">
+                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        </p> 
+                    </div>
+
+                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]">
+                        <img src="./assets/svg/circulo-icone.svg" alt="">
+                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.   
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="./assets/Images/segundo banner.png" class="w-full h-auto">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- segunda section repetidade do destaque de caneca -->
+        <section class="destaque py-[80px] min-h-[720px] pt-12 pb-2">
+            <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center ">
+                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center min-h-[740px]">
+                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px]">
+                </div>
+                <div class="w-full md:w-1/2 bg-[#FFFFFF] px-[24px] flex flex-col gap-[20px] py-[14px]">
+                    <h1 class="font-bold text-[24px] md:text-[30px]">LOREM IPSUM</h1>
+                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- AQUI SÃO OS CARDS E SWIPER -->
+        <section class="produtos py-[40px]">
+            <div class="max-w-[1300px] mx-auto px-[20px]">
+
+                <div class="flex justify-between items-center">
+                    <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
+                    <a href="#" class="text-[14px] color-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
+                </div>
+        
+                <div class="relative w-full max-w-[1300px] mx-auto">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper" id="card-container-2">
+                        </div>
+                        
+                    </div>
+                    <div class="swiper-pagination !-bottom-8">
+        
+                    </div>
+                    <div class="swiper-button-prev cursor-pointer">
+                        <img src="./assets/svg/previous-arrow.svg" alt="">
+                    </div>
+
+                    <div class="swiper-button-next cursor-pointer">
+                        <img src="./assets/svg/next-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner-contact">
+            <div class="max-w-[1200px] mx-auto px-[20px]">
+
+            </div>
+        </section>
+
+        <section class="newsletter-cadastro">
+            <div class="max-w-[1200px] mx-auto px-[20px]">
+                <form class="newsletter-form">
+                    <h2>Cadastre-se na nossa <a>newsletter</a></h2>
+                    <input type="text" placeholder="Digite seu nome" required>
+                    <input type="email" placeholder="Digite seu email" required>
+                    <input type="checkbox" name="termos" id="termos">
+                    <label for="termos">Estou de acordo com a <a>Política de Privacidade</a></label>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="max-w-[1200px] mx-auto px-[20px]">
+                <section class="footer-up">
+                    <div class="avanti-social">
+                    
+                    </div>
+
+                    <div class="institucional">
+                        <ul>
+                            <li><h4>Institucional</h4></li>
+                            <li><h5>Sobre nós</h5></li>
+                            <li><h5>Nossas Lojas</h5></li>
+                            <li><h5>Privacidade e Segurança</h5></li>
+                            <li><h5>Termos e condições</h5></li>
+                        </ul>     
+                    </div>
+
+                    <div class="central-ajuda">
+                        <ul>
+                            <li><h4>Central de ajuda</h4></li>
+                            <li><h5>Fale Conosco</h5></li>
+                            <li><h5>Frete e Entrega</h5></li>
+                            <li><h5>Trocas e Devoluções</h5></li>
+                            <li><h5>Formas de Pagamento</h5></li>
+                            <li><h5>FAQ</h5></li>
+                        </ul>
+                    </div>
+
+                    <div class="atendimento">
+                        <ul>
+                            <li><h4>Atendimento</h4></li>
+                            <li><h5><strong>Telefone:</strong>(00) 1234-5678</h5></li>
+                            <li><h5><strong>Email:</strong>exemplo@exemplo.com</h5></li>
+                            <li><h5>Horário de atendimento:</h5></li>
+                            <p>Segunda a Sábado: 07h00 às 23h00</p>
+                            <p>Domingos a Feriados: 07h00 às 21h00</p>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <section class="payments">
+                    
+                </section>
+
+                <section class="footer-bottom">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita porro asperiores velit non. Dignissimos, ducimus possimus. Tenetur, at dolor numquam neque similique iure deserunt? Voluptatibus ut doloremque saepe quidem laudantium?</p>
+                    <div></div>
+                </section>
+            </div>
+        </footer>
+
+    </main>
+    
+</body>
+<script src="script.js"></script>
+</html>
