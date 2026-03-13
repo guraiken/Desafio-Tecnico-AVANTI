@@ -57,7 +57,7 @@
             <p>Ganhe <a class="bg-[#6220C1] rounded-[6px] px-[4px]">R$10,00</a> de desconto no seu primeiro pedido. Utilize o cupom <i class="font-normal">DESCONTO10</i></p>
         </div>
 
-        <section class="max-w-[1200px] mx-auto p-[20px] flex justify-between items-center">
+        <section class="search max-w-[1200px] mx-auto p-[20px] flex justify-between items-center">
             <div class="flex gap-[60px] items-center w-full flex-1 min-w-0">
                 <div class="logo">
                     <img src="./assets/svg/AVANTI-logo.svg" alt="Logo">
@@ -68,7 +68,7 @@
                 </div>
                 
             </div>
-            <div class="flex justify-end gap-[16px] flex items-center leading-[1]">
+            <div class="user-actions flex justify-end gap-[16px] flex items-center leading-[1]">
                 <img src="./assets/svg/noun-person.svg" alt="">
                 <div class="flex flex-col">
                     <p>Olá,</p>
@@ -100,23 +100,23 @@
     </header>
     
     <main>
-        <section class="banner-sale w-full bg-[#E7E7EA] ">
-            <div class="md:max-w-[1200px] mx-auto md:px-[20px] flex object-cover md:flex-row items-center justify-center gap-[20px] md:gap-[20px] md: justify-start">
+        <section class="banner-sale w-full bg-[#E7E7EA] md:h-auto">
+            <div class="md:max-w-[1200px] mx-auto md:px-[20px] flex object-cover md:flex-row items-center justify-center gap-[20px] md:gap-[0px] md: justify-start md:h-auto h-[300px]">
                 <img src="./assets/Images/cadeira-sale.png" alt="Cadeira com roupas" class="w-full max-w-[500px] hidden md:block">
-                <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-full max-w-[300px] h-auto block md:hidden">
+                <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-[50%] max-w-[300px] h-full block md:hidden">
             
-                <div class="flex flex-col items-center text-center sm:pl-20">
+                <div class="flex flex-col items-center text-center pr-[10px] md:pr-0 lg:p-[20px]">
                     <h1 class="flex flex-col text-black leading-[0.9] md:flex-row">
-                        <span class="text-[60px] md:text-[85px] font-black">SUPER</span>
-                        <span class="text-[60px] md:text-[85px] font-light">SALE</span>
+                        <span class="md:text-[60px] text-[40px] lg:text-[85px] font-black">SUPER</span>
+                        <span class="md:text-[60px] text-[40px] lg:text-[85px] font-light">SALE</span>
                     </h1>
-                    <p class="text-[14px] md:text-[16px] font-bold text-[#005cff] tracking-[0.15em] mt-[30px] mb-[15px] md:hidden">
+                    <p class="text-[12px] md:text-[16px] font-bold text-[#005cff] mt-[10px] mb-[15px] md:hidden">
                         SELECTED ITEMS UP TO
                     </p>
                     <p class="text-[14px] md:text-[16px] font-bold text-[#005cff] tracking-[0.5em] mt-[30px] mb-[15px] hidden md:block font-extrabold">
                         ITENS SELECIONADOS COM ATÉ
                     </p>
-                    <p class="text-[60px] md:text-[60px] font-bold text-[#005cff] leading-none">
+                    <p class="text-[32px] md:text-[60px] font-bold text-[#005cff] leading-none">
                         50%OFF
                     </p>
                 </div>
@@ -125,10 +125,10 @@
         </section>
         
         <!-- AQUI SÃO OS CARDS E SWIPER -->
-        <section class="produtos py-[40px]">
+        <section class="products py-[40px]">
             <div class="max-w-[1300px] mx-auto px-[20px]">
 
-                <div class="flex justify-between items-center mt-[24px]">
+                <div class="flex justify-between items-center mt-[24px] pb-[12px]">
                     <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
                     <a href="#" class="text-[14px] color-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
                 </div>
@@ -154,10 +154,10 @@
         </section>
 
         <!-- caneca do site  -->
-        <section class="destaque py-[80px] min-h-[720px] pb-12">
+        <section class="highlight py-[80px] pb-12">
             <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center">
-                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center min-h-[740px]">
-                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px]">
+                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center md:min-h-[740px] min-h-[400px]">
+                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px] w-[100%]">
                 </div>
                 <div class="w-full md:w-1/2 bg-[#FFFFFF] px-[24px] flex flex-col gap-[20px] py-[14px]">
                     <h1 class="font-bold text-[24px] md:text-[30px]">LOREM IPSUM</h1>
@@ -168,7 +168,7 @@
         </section>
 
         <!-- não esquecer da responsividade depois -->
-        <section class="destaque-caracteristicas py-[40px] bg-[#DEDEDE]">
+        <section class="highlight-characteristics py-[40px] bg-[#DEDEDE]">
             <div class="max-w-[1200px] mx-auto flex justify-center items-center px-[20px] flex-col md:flex-row gap-[10px]">
                 <div class="w-full md:w-1/2 flex flex-col items-center justify-center gap-[20px]">
                     <h1 class="font-bold text-[#4F4F4F] text-[30px] tracking-wider py-[20px] text-center pl-[40px]">LOREM IPSUM</h1>
@@ -198,10 +198,10 @@
         </section>
 
         <!-- segunda section repetidade do destaque de caneca -->
-        <section class="destaque py-[80px] min-h-[720px] pt-12 pb-2">
+        <section class="hightlight py-[80px] pt-12 pb-2">
             <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center ">
-                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center min-h-[740px]">
-                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px]">
+                <div class="background w-full md:w-1/2 bg-[#C2C2C2] flex items-center justify-center md:min-h-[740px] min-h-[400px]">
+                    <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[520px] w-[100%]">
                 </div>
                 <div class="w-full md:w-1/2 bg-[#FFFFFF] px-[24px] flex flex-col gap-[20px] py-[14px]">
                     <h1 class="font-bold text-[24px] md:text-[30px]">LOREM IPSUM</h1>
@@ -213,11 +213,11 @@
         
 
         <!-- AQUI SÃO OS CARDS E SWIPER -->
-        <section class="produtos py-[40px]">
+        <section class="products py-[40px] md:block hidden">
             <div class="max-w-[1300px] mx-auto px-[20px]">
 
                 <div class="flex justify-between items-center">
-                    <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
+                    <h2 class="text-[20px] font-bold text-black pb-[12px]">Lançamentos</h2>
                     <a href="#" class="text-[14px] text-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
                 </div>
         
@@ -241,74 +241,121 @@
             </div>
         </section>
 
-        <section class="banner-contact">
-            <div class="max-w-[1200px] mx-auto px-[20px]">
+        <section class="banner-contact relative w-full py-[60px]">
+            <img 
+                src="./assets/Images/avanti-background.png" class="w-full h-[660px] object-cover">
 
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-full bg-[#005CFF] py-[40px] text-center flex justify-center">
+                    <p class="text-white sm:text-[16px] md:text-[30px] font-normal sm:font-semibold w-[85%] md:w-full sm:tracking-tighter">
+                        Entre em contato conosco e verifique a disponibilidade para sua região!
+                    </p>
+                </div>
             </div>
+
         </section>
 
-        <section class="newsletter-cadastro">
-            <div class="max-w-[1200px] mx-auto px-[20px]">
-                <form class="newsletter-form">
-                    <h2>Cadastre-se na nossa <a>newsletter</a></h2>
-                    <input type="text" placeholder="Digite seu nome" required>
-                    <input type="email" placeholder="Digite seu email" required>
-                    <input type="checkbox" name="termos" id="termos">
-                    <label for="termos">Estou de acordo com a <a>Política de Privacidade</a></label>
-                    <button type="submit">Cadastrar</button>
+        <section class="newsletter-register">
+            <div class="max-w-[1200px] mx-auto px-[20px] flex flex-col items-center justify-center gap-[20px]">
+                <h2 class="font-bold text-[20px]">Cadastre-se na nossa <a class="text-[#005cff] font-bold">newsletter</a></h2>
+                <form class="newsletter-form bg-[#dedede] w-[100%] flex items-center justify-center min-h-[160px] rounded-lg">
+                    <div>    
+                        <input type="text" placeholder="Digite seu nome" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black">
+                        <input type="email" placeholder="Digite seu email" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black">
+                        <input type="checkbox" name="termos" id="termos" class="accent-[#005CFF] focus:ring-0">
+                    </div>
+                    <label for="termos" class="mx-2 text-[#656565] font-bold">Estou de acordo com a <a class="underline">Política de Privacidade</a></label>
+                    <button type="submit" class="ml-2 px-[16px] py-[12px] bg-[#005cff] text-[#FFFFFF] rounded-lg text-[16px]">Cadastrar</button>
                 </form>
             </div>
         </section>
 
-        <footer>
+        <footer class="footer-layout bg-[#f5f5f5] mt-[40px] h-[380px]">
             <div class="max-w-[1200px] mx-auto px-[20px]">
-                <section class="footer-up">
-                    <div class="avanti-social">
-                    
+                <section class="footer-up flex justify-center items-center gap-[100px] w-auto min-h-[270px]">
+                    <div class="avanti-social flex flex-col gap-[40px] min-h-[180px]">
+                            <img src="assets/svg/AVANTI-logo.svg" class="max-w-[150px]">
+                        <div class="socials flex gap-[40px] justify-center items-center">
+                            <a href="https://www.instagram.com/penseavanti/"><img src="./assets/svg/instagram.svg" alt=""></a>
+                            <a href="https://www.facebook.com/penseavanti/?locale=pt_BR"><img src="./assets/svg/facebook.svg" alt=""></a>
+                            <a href="https://www.youtube.com/@penseavanti"><img src="./assets/svg/youtube.svg" alt=""></a>
+                            <a href=""><img src="./assets/svg/tiktok.svg" alt=""></a>
+                        </div>
                     </div>
-
-                    <div class="institucional">
-                        <ul>
-                            <li><h4>Institucional</h4></li>
-                            <li><h5>Sobre nós</h5></li>
-                            <li><h5>Nossas Lojas</h5></li>
-                            <li><h5>Privacidade e Segurança</h5></li>
-                            <li><h5>Termos e condições</h5></li>
-                        </ul>     
+                    <div class="support-contact flex flex-row gap-[80px] justify-center items-start">
+                        <div class="institucional"> 
+                            <ul class="font-[#303030] leading-[30px] text-[14px]">
+                                <li><h4 class="font-bold font-[14px] font-[#000000]">Institucional</h4></li>
+                                <li><h5>Sobre nós</h5></li>
+                                <li><h5>Nossas Lojas</h5></li>
+                                <li><h5>Privacidade e Segurança</h5></li>
+                                <li><h5>Termos e condições</h5></li>
+                            </ul>     
+                        </div>
+                        
+                        <div class="help-central">
+                            <ul class="font-[#303030] leading-[30px] text-[14px]">
+                                <li><h4 class="font-bold] font-[#000000]">Central de ajuda</h4></li>
+                                <li><h5>Fale Conosco</h5></li>
+                                <li><h5>Frete e Entrega</h5></li>
+                                <li><h5>Trocas e Devoluções</h5></li>
+                                <li><h5>Formas de Pagamento</h5></li>
+                                <li><h5>FAQ</h5></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="service">
+                            <ul class="font-[#303030] leading-[30px] text-[14px]">
+                                <li><h4 class="font-bold text-[#000000] mb-[8px]">Atendimento</h4></li>
+                                <li><h5><strong>Telefone:</strong> (00) 1234-5678</h5></li>
+                                <li><h5><strong>Email:</strong> exemplo@exemplo.com</h5></li>
+                                <li><h5 class="font-bold text-[12px]">Horário de atendimento:</h5></li>
+                                <p class="text-[12px]">Segunda a Sábado: 07h00 às 23h00</p>
+                                <p class="text-[12px]">Domingos a Feriados: 07h00 às 21h00</p>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="central-ajuda">
-                        <ul>
-                            <li><h4>Central de ajuda</h4></li>
-                            <li><h5>Fale Conosco</h5></li>
-                            <li><h5>Frete e Entrega</h5></li>
-                            <li><h5>Trocas e Devoluções</h5></li>
-                            <li><h5>Formas de Pagamento</h5></li>
-                            <li><h5>FAQ</h5></li>
-                        </ul>
-                    </div>
-
-                    <div class="atendimento">
-                        <ul>
-                            <li><h4>Atendimento</h4></li>
-                            <li><h5><strong>Telefone:</strong>(00) 1234-5678</h5></li>
-                            <li><h5><strong>Email:</strong>exemplo@exemplo.com</h5></li>
-                            <li><h5>Horário de atendimento:</h5></li>
-                            <p>Segunda a Sábado: 07h00 às 23h00</p>
-                            <p>Domingos a Feriados: 07h00 às 21h00</p>
-                        </ul>
-                    </div>
-
+                        
                 </section>
 
-                <section class="payments">
-                    
+                <section class="payment-methods bg-[#f5f5f5]">
+                    <div class="max-w-[1200px] mx-auto py-[14px]">
+                        <div class="flex justify-center items-center gap-[20px]">
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/amex.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/mastercard.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/visa.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/hipercard.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/elo.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/b(1).svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">    
+                                <img src="./assets/Images/Payment-Icons/paypal-seeklogo.com.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/pix.svg" alt="">
+                            </div>
+                            <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
+                                <img src="./assets/Images/Payment-Icons/boleto.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
-                <section class="footer-bottom">
+                <!-- <section class="footer-bottom">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita porro asperiores velit non. Dignissimos, ducimus possimus. Tenetur, at dolor numquam neque similique iure deserunt? Voluptatibus ut doloremque saepe quidem laudantium?</p>
                     <div></div>
-                </section>
+                </section> -->
             </div>
         </footer>
 

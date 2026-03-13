@@ -16,7 +16,7 @@ const container2 = document.getElementById("card-container-2");
 produtos.forEach(produto => {
     container.innerHTML += `
     <div class="swiper-slide h-auto">
-        <div class="flex flex-col p-[15px] border border-gray-200 rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
+        <div class="flex flex-col p-[8px] border border-gray-200 rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
             <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-[#FFFF] text-[10px] text-center font-bold px-[6px] py-[2px] rounded-[4px] z-10 ">
                 ${produto.tag}
             </span>
@@ -42,7 +42,7 @@ produtos.forEach(produto => {
                 </span>
             </div>
 
-            <button class="w-full bg-[#005cff] hover:bg-[#004cd2] text-white font-semibold text-[14px] py-[8px] rounded-[6px] transition-colors cursor-pointer">
+            <button class="w-full bg-[#005cff] hover:bg-[#004cd2] text-white font-bold text-[14px] py-[8px] rounded-[8px] font-[#FFFFFF] transition-colors cursor-pointer">
                 Comprar
             </button>
         </div>
@@ -50,7 +50,7 @@ produtos.forEach(produto => {
     `
     container2.innerHTML+= `
     <div class="swiper-slide h-auto">
-        <div class="flex flex-col p-[15px] border border-gray-200 rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
+        <div class="flex flex-col p-[8px] border border-gray-200 rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
             <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-[#FFFF] text-[10px] text-center font-bold px-[6px] py-[2px] rounded-[4px] z-10 ">
                 ${produto.tag}
             </span>
@@ -76,7 +76,7 @@ produtos.forEach(produto => {
                 </span>
             </div>
 
-            <button class="w-full bg-[#005cff] hover:bg-[#004cd2] text-white font-semibold text-[14px] py-[8px] rounded-[6px] transition-colors cursor-pointer">
+            <button class="w-full bg-[#005cff] hover:bg-[#004cd2] text-white font-bold text-[14px] py-[8px] rounded-[8px] font-[#FFFFFF] transition-colors cursor-pointer">
                 Comprar
             </button>
         </div>
