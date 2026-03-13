@@ -16,11 +16,11 @@
     
     <!-- style é necessario aqui para poder estilizar a paginação do swiper -->
     <style>
-        .swiper {
+        .swiper-1, .swiper-2 {
             visibility: visible !important;
         }
 
-        .swiper-pagination {
+        .pagination-1, .pagination-2 {
             bottom: 8px !important;
         }
         .swiper-pagination-bullet {
@@ -34,16 +34,16 @@
             background: #303030 !important;
             width: 8px !important;
         }
-        .swiper-button-prev, .swiper-button-next {
+        .prev-1, .prev-2, .next-1, .next-2 {
             position: absolute;
             color: transparent;
             top: 50%;
             transform: translateY(-50%);
         }
-        .swiper-button-prev {
+        .prev-1, .prev-2 {
             left: -20px !important
         }
-        .swiper-button-next{
+        .next-1, .next-2{
             right: -26px !important
         }
 
@@ -103,9 +103,9 @@
         <section class="banner-sale w-full bg-[#E7E7EA] ">
             <div class="md:max-w-[1200px] mx-auto md:px-[20px] flex object-cover md:flex-row items-center justify-center gap-[20px] md:gap-[20px] md: justify-start">
                 <img src="./assets/Images/cadeira-sale.png" alt="Cadeira com roupas" class="w-full max-w-[500px] hidden md:block">
-                <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-full max-w-[300px] block md:hidden">
+                <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-full max-w-[300px] h-auto block md:hidden">
             
-                <div class="flex flex-col items-center text-center">
+                <div class="flex flex-col items-center text-center sm:pl-20">
                     <h1 class="flex flex-col text-black leading-[0.9] md:flex-row">
                         <span class="text-[60px] md:text-[85px] font-black">SUPER</span>
                         <span class="text-[60px] md:text-[85px] font-light">SALE</span>
@@ -134,19 +134,19 @@
                 </div>
         
                 <div class="relative w-full max-w-[1300px] mx-auto">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper swiper-1">
                         <div class="swiper-wrapper" id="card-container">
                         </div>
                         
                     </div>
-                    <div class="swiper-pagination !-bottom-8">
+                    <div class="swiper-pagination pagination-1 !-bottom-8">
         
                     </div>
-                    <div class="swiper-button-prev cursor-pointer">
+                    <div class="swiper-button-prev prev-1 cursor-pointer">
                         <img src="./assets/svg/previous-arrow.svg" alt="">
                     </div>
 
-                    <div class="swiper-button-next cursor-pointer">
+                    <div class="swiper-button-next next-1 cursor-pointer">
                         <img src="./assets/svg/next-arrow.svg" alt="">
                     </div>
                 </div>
@@ -218,23 +218,23 @@
 
                 <div class="flex justify-between items-center">
                     <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
-                    <a href="#" class="text-[14px] color-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
+                    <a href="#" class="text-[14px] text-[#303030] hover:text-[#005cff] transition-colors bold">Ver mais</a>
                 </div>
         
                 <div class="relative w-full max-w-[1300px] mx-auto">
-                    <div class="swiper mySwiper">
+                    <div class="swiper mySwiper swiper-2">
                         <div class="swiper-wrapper" id="card-container-2">
                         </div>
                         
                     </div>
-                    <div class="swiper-pagination !-bottom-8">
+                    <div class="swiper-pagination pagination-2 !-bottom-8">
         
                     </div>
-                    <div class="swiper-button-prev cursor-pointer">
+                    <div class="swiper-button-prev prev-2 cursor-pointer">
                         <img src="./assets/svg/previous-arrow.svg" alt="">
                     </div>
 
-                    <div class="swiper-button-next cursor-pointer">
+                    <div class="swiper-button-next next-2 cursor-pointer">
                         <img src="./assets/svg/next-arrow.svg" alt="">
                     </div>
                 </div>

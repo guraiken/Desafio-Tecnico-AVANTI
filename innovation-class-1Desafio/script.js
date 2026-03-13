@@ -84,33 +84,56 @@ produtos.forEach(produto => {
     `
 })
 
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'horizontal',
+const swiper1 = new Swiper('.swiper-1', {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 10,
+  loop: true,
+
+  pagination: {
+    el: '.pagination-1',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.next-1',
+    prevEl: '.prev-1',
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      slidesPerGroup: 3
+    },
+    1024: {
+      slidesPerView: 5,
+      slidesPerGroup: 3
+    }
+  }
+});
+
+const swiper2 = new Swiper('.swiper-2', {
   slidesPerView: 2,
   slidesPerGroup: 3,
   spaceBetween: 10,
   loop: true,
+
   pagination: {
-    el: '.swiper-pagination',
+    el: '.pagination-2',
     clickable: true,
   },
 
-  breakpoints: {
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 15,
-        },
-        1024: {
-            slidesPerView: 5, 
-            spaceBetween: 15,
-        },
-  },
-
-   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.next-2',
+    prevEl: '.prev-2',
   },
 
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 5,
+    }
+  }
 });
