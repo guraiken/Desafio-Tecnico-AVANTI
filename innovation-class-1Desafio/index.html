@@ -58,31 +58,45 @@
             <p>Ganhe <a class="bg-[#6220C1] rounded-[6px] px-[4px]">R$10,00</a> de desconto no seu primeiro pedido. Utilize o cupom <i class="font-normal">DESCONTO10</i></p>
         </div>
 
-        <section class="search max-w-[1200px] mx-auto p-[20px] flex justify-between items-center">
-            <div class="flex gap-[60px] items-center w-full flex-1 min-w-0">
+        <section class="search max-w-[1200px] mx-auto p-[20px] flex flex-col md:grid md:grid-cols-[auto_0.95fr_auto] md:items-center gap-[16px] md:gap-[40px]">
+        
+            <!-- linha superior -->
+            <div class="flex items-center justify-between w-full md:w-auto">
+        
+                <!-- botão hamburguer mobile -->
+                <button class="md:hidden text-[32px]">
+                    ☰
+                </button>
+        
+                <!-- logo -->
                 <div class="logo">
                     <img src="./assets/svg/AVANTI-logo.svg" alt="Logo">
                 </div>
-                <div class="flex items-center gap-[10px] p-[12px] w-full max-w-[600px] border border-[#dddddd] rounded-[12px]">
-                    <input type="text" placeholder="Digite aqui o que você procura" class="border-none outline-none flex-1 px-[10px] w-[94%] placeholder-black max-h-[20px]">
-                    <img src="./assets/svg/search.svg" alt="">
-                </div>
-                
+        
+                <!-- carrinho mobile -->
+                <img src="./assets/svg/cart-mobile.svg" class="md:hidden w-[32px]">
             </div>
-            <div class="user-actions flex justify-end gap-[16px] flex items-center leading-[1]">
-                <img src="./assets/svg/noun-person.svg" alt="">
-                <div class="flex flex-col">
+        
+            <!-- barra de pesquisa -->
+            <div class="flex items-center gap-[10px] p-[12px] w-full md:max-w-[600px] border border-[#dddddd] rounded-[12px]">
+                <input type="text" placeholder="Digite aqui o que você procura"
+                    class="border-none outline-none flex-1 px-[10px] placeholder-black">
+                <img src="./assets/svg/search.svg" class="pr-[2px]">
+            </div>
+        
+            <!-- usuário + carrinho desktop -->
+            <div class="hidden md:flex items-center gap-[16px]">
+                <img src="./assets/svg/noun-person.svg">
+                <div class="flex flex-col leading-[1]">
                     <p>Olá,</p>
                     <p>Nome cliente!</p>
                 </div>
-                <div class="px-[10px]">
-                    <img src="./assets/svg/cart.svg" alt="">
-                </div>
+                <img src="./assets/svg/cart.svg">
             </div>
         </section>
-            
-        <nav class="w-full bg-white"> <div class="max-w-[1200px] mx-auto px-[20px] py-[12px]">
-        <ul class="flex justify-start items-center gap-[30px] text-[14px] font-semibold text-[#000000]">
+
+        <nav class="w-full bg-white"> <div class="max-w-[1200px] mx-auto px-[20px] md:py-[12px]">
+        <ul class="md:flex justify-start items-center gap-[30px] text-[14px] font-semibold text-[#000000] hidden">
             <li>
                 <a href="#" class="flex items-center hover:text-[#005cff] transition-colors font-extrabold gap-[6px]">
                     <strong>☰</strong> Todas as Categorias
@@ -144,11 +158,11 @@
         
                     </div>
                     <div class="swiper-button-prev prev-1 cursor-pointer">
-                        <img src="./assets/svg/previous-arrow.svg" alt="">
+                        <img src="./assets/svg/previous-arrow.svg" alt="" class="hidden md:flex">
                     </div>
 
                     <div class="swiper-button-next next-1 cursor-pointer">
-                        <img src="./assets/svg/next-arrow.svg" alt="">
+                        <img src="./assets/svg/next-arrow.svg" alt="" class="hidden md:block">
                     </div>
                 </div>
             </div>
@@ -156,42 +170,44 @@
 
         <!-- caneca do site  -->
         <section class="highlight py-[80px] pb-12">
-            <div class="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center px-[20px]">
+            <div class="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:px-[20px]">
                 <div class="background w-full md:max-w-[650px] bg-[#C2C2C2] flex items-center justify-center md:min-h-[740px] min-h-[400px]">
                     <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[560px] w-[100%]">
                 </div>
-                <div class="w-full bg-[#FFFFFF] px-[40px] flex flex-col gap-[20px] font-[Nunito] max-w-[520px]">
+                <div class="w-full bg-[#FFFFFF] px-[20px] md:px-[40px] py-[20px] md:py-0 flex flex-col gap-[20px] font-[Nunito] max-w-[520px]">
                     <h1 class="font-bold text-[24px] md:text-[30px] pt-[14px] tracking-[2px]">LOREM IPSUM</h1>
-                    <p class="text-[18px] md:text-[18px] tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
-                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider hidden md:flex">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] max-w-[440px] hidden md:flex">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider flex md:hidden">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider flex md:hidden">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et</p>
                 </div>
             </div>
         </section>
 
         <!-- não esquecer da responsividade depois -->
         <section class="highlight-characteristics py-[40px] bg-[#DEDEDE]">
-            <div class="max-w-[1260px] mx-auto flex justify-center items-center px-[20px] flex-col md:flex-row gap-[10px]">
-                <div class="w-full md:w-1/2 flex flex-col items-center justify-center gap-[20px]">
-                    <h1 class="font-bold text-[#4F4F4F] text-[30px] tracking-wider py-[20px] text-center pl-[40px]">LOREM IPSUM</h1>
+            <div class="max-w-[1260px] mx-auto flex justify-center items-center px-[20px] flex-col-reverse md:flex-row gap-[10px]">
+                <div class="w-full md:w-[45%] flex flex-col items-center gap-[20px] md:gap-[32px]">
+                    <h1 class="font-bold text-[#000000] md:text-[#4F4F4F] text-[30px] tracking-wider mt-[10px] md:mt-0 md:mb-[24px] text-center md:pl-[40px]">LOREM IPSUM</h1>
 
-                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]">
-                        <img src="./assets/svg/circulo-icone.svg" alt="">
-                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> 
+                    <div class="text-[#000000] md:text-[#4F4F4F] flex items-center gap-[12px] md:gap-[20px] text-[12px] md:text-[18px] drop-shadow-md md:drop-shadow-none md:tracking-wider">
+                        <img src="./assets/svg/circulo-icone.svg" alt="" class="w-[60px] md:w-auto drop-shadow-md md:drop-shadow-none">
+                        <p class="max-w-[360px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p> 
                     </div>
 
-                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]"> 
-                        <img src="./assets/svg/circulo-icone.svg" alt="">
-                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                    <div class="text-[#000000] md:text-[#4F4F4F] flex items-center gap-[12px] md:gap-[20px] text-[12px] md:text-[18px] drop-shadow-md md:drop-shadow-none md:tracking-wider"> 
+                        <img src="./assets/svg/circulo-icone.svg" alt="" class="w-[60px] md:w-auto drop-shadow-md md:drop-shadow-none">
+                        <p class="max-w-[360px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                         </p> 
                     </div>
 
-                    <div class="text-[#4F4F4F] flex items-start gap-[20px] text-[18px]">
-                        <img src="./assets/svg/circulo-icone.svg" alt="">
-                        <p class="max-w-[320px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.   
+                    <div class="text-[#000000] md:text-[#4F4F4F] flex items-center gap-[12px] md:gap-[20px] text-[12px] md:text-[18px] drop-shadow-md md:drop-shadow-none md:tracking-wider">
+                        <img src="./assets/svg/circulo-icone.svg" alt="" class="w-[60px] md:w-auto drop-shadow-md md:drop-shadow-none">
+                        <p class="max-w-[360px] leading-snug">Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.   
                         </p>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2">
+                <div class="w-full md:w-[55%]">
                     <img src="./assets/Images/segundo banner.png" class="w-full h-auto">
                 </div>
 
@@ -200,14 +216,16 @@
 
         <!-- segunda section repetidade do destaque de caneca -->
         <section class="highlight py-[80px] pt-12 pb-6">
-            <div class="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center px-[20px]">
+            <div class="max-w-[1260px] mx-auto flex flex-col md:flex-row items-center md:px-[20px]">
                 <div class="background w-full md:max-w-[650px] bg-[#C2C2C2] flex items-center justify-center md:min-h-[740px] min-h-[400px]">
                     <img src="./assets/Images/mug-mockup.png" alt="" class="max-w-[560px] w-[100%]">
                 </div>
-                <div class="w-full bg-[#FFFFFF] px-[40px] flex flex-col gap-[20px] font-[Nunito] max-w-[520px]">
+                <div class="w-full bg-[#FFFFFF] px-[20px] md:px-[40px] py-[20px] md:py-0 flex flex-col gap-[20px] font-[Nunito] max-w-[520px]">
                     <h1 class="font-bold text-[24px] md:text-[30px] pt-[14px] tracking-[2px]">LOREM IPSUM</h1>
-                    <p class="text-[18px] md:text-[18px] tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
-                    <p class="text-[18px] md:text-[18px] max-w-[440px]">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider hidden md:flex">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] max-w-[440px] hidden md:flex">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider flex md:hidden">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</p>
+                    <p class="text-[14px] md:text-[18px] tracking-wider flex md:hidden">Cras dignissim est et pellentesque tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue placerat et</p>
                 </div>
             </div>
         </section>
@@ -243,11 +261,10 @@
         </section>
 
         <section class="banner-contact relative w-full py-[50px]">
-            <img 
-                src="./assets/Images/avanti-background.png" class="w-full h-[660px] object-cover">
-
+            <img src="./assets/Images/avanti-background.png" class="w-full h-[660px] object-cover hidden md:block">
+            <img src="./assets/Images/banner-mobile.png" class="w-full h-[660px] object-fit md:hidden block max-h-[449px]">
             <div class="absolute inset-0 flex items-center justify-center">
-                <div class="w-full bg-[#005CFF] py-[40px] text-center flex justify-center">
+                <div class="w-full bg-[#005CFF] py-[10px] md:py-[40px] text-center flex justify-center">
                     <p class="text-white sm:text-[16px] md:text-[30px] font-normal sm:font-semibold w-[85%] md:w-full sm:tracking-tighter">
                         Entre em contato conosco e verifique a disponibilidade para sua região!
                     </p>
@@ -259,25 +276,29 @@
         <!-- seção do newsletter -->
         <section class="newsletter-register">
             <div class="max-w-[1260px] mx-auto px-[20px] flex flex-col items-center justify-center gap-[20px]">
-                <h2 class="font-bold text-[20px]">Cadastre-se na nossa <a class="text-[#005cff] font-bold">newsletter</a></h2>
-                <form class="newsletter-form bg-[#dedede] w-[100%] flex items-center justify-center min-h-[160px] rounded-lg">
-                    <div>    
-                        <input type="text" placeholder="Digite seu nome" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black">
-                        <input type="email" placeholder="Digite seu email" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black">
-                        <input type="checkbox" name="termos" id="termos" class="accent-[#005CFF] focus:ring-0">
+                <h2 class="font-bold text-[16px] md:text-[20px]">Cadastre-se na nossa <a class="text-[#005cff] font-bold">newsletter</a></h2>
+                <form class="newsletter-form bg-[#f5f5f5] md:bg-[#dedede] w-[100%] flex items-center justify-center md:min-h-[160px] min-h-[320px] rounded-lg flex-col md:flex-row">
+                    <div class="flex justify-center items-center md:flex-row flex-col gap-[20px] md:gap-0 w-full md:w-auto">    
+                        <input type="text" placeholder="Digite seu nome" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black w-[90%] md:w-auto">
+                        <input type="email" placeholder="Digite seu email" required class="bg-[#FFFFFF] px-[20px] py-[10px] outline-none rounded-lg mx-4 placeholder-black w-[90%] md:w-auto">
                     </div>
-                    <label for="termos" class="mx-2 pr-3 text-[#656565] font-bold">Estou de acordo com a <a class="underline">Política de Privacidade</a></label>
-                    <button type="submit" class="ml-2 px-[16px] py-[12px] bg-[#005cff] text-[#FFFFFF] rounded-lg text-[18px] font-bold cursor-pointer hover:bg-[#004cd2]">Cadastrar</button>
+                    <div class="flex justify-center items-center pt-[12px] md:p-0">
+                        <input type="checkbox" name="termos" id="termos" class="accent-[#005CFF] focus:ring-0">
+                        <label for="termos" class="mx-2 pr-3 text-[#656565] font-bold text-[12px] tracking-tighter md:tracking-normal">Estou de acordo com a <a class="underline">Política de Privacidade</a></label>
+                    </div>
+                    <div class="pt-[12px] md:p-0 w-full md:w-auto flex justify-center">
+                        <button type="submit" class="px-[16px] py-[12px] bg-[#005cff] text-[#FFFFFF] rounded-lg text-[18px] font-bold cursor-pointer hover:bg-[#004cd2] w-[90%] md:w-auto">Cadastrar</button>
+                    </div>
                 </form>
             </div>
         </section>
 
         <!-- footer -->
-        <footer class="footer-layout bg-[#f5f5f5] mt-[60px] h-[480px]">
+        <footer class="footer-layout bg-[#f5f5f5] mt-[60px] md:h-[480px]">
             <div class="bg-[#f5f5f5]"> <!--tive que colocar essa div extra pra não me atrapalhar com a cor-->
                 <div class="max-w-[1260px] mx-auto px-[20px]">
-                    <section class="footer-up flex justify-center items-center gap-[100px] w-auto min-h-[270px]">
-                        <div class="avanti-social flex flex-col gap-[40px] min-h-[180px]">
+                    <section class="footer-up flex justify-center items-center gap-[100px] w-auto min-h-[180px] md:min-h-[270px] md:flex-row flex-col">
+                        <div class="avanti-social flex flex-col gap-[40px] md:min-h-[180px] md:items-start items-center pt-[8px] md:p-0">
                             <img src="assets/svg/AVANTI-logo.svg" class="max-w-[150px]">
                             <div class="socials flex gap-[40px] justify-center items-center">
                                 <a href="https://www.instagram.com/penseavanti/"><img src="./assets/svg/instagram.svg" alt=""></a>
@@ -286,7 +307,7 @@
                                 <a href=""><img src="./assets/svg/tiktok.svg" alt=""></a>
                             </div>
                         </div>
-                        <div class="support-contact flex flex-row gap-[80px] justify-center items-start">
+                        <div class="support-contact md:flex flex-row gap-[80px] justify-center items-start hidden">
                             <div class="institucional"> 
                                 <ul class="font-[#303030] leading-[30px] text-[14px]">
                                     <li><h4 class="font-bold font-[14px] font-[#000000]">Institucional</h4></li>
@@ -324,8 +345,8 @@
                     </section>
                     
                     <section class="payment-methods bg-[#f5f5f5]">
-                        <div class="max-w-[1260px] mx-auto px-[20px] py-[14px] pb-[42px]">
-                            <div class="flex justify-center items-center gap-[20px]">
+                        <div class="max-w-[1260px] mx-auto px-[20px] py-[14px] pb-[42px] md:w-full w-[80%]">
+                            <div class="flex justify-center items-center gap-[28px] md:gap-[20px] md:flex-nowrap flex-wrap brightness-0">
                                 <div class="flex justify-center items-center min-w-[24px] min-h-[24px]">
                                     <img src="./assets/Images/Payment-Icons/amex.svg" alt="">
                                 </div>
@@ -358,15 +379,16 @@
                     </section>
                     
                     <section class="footer-bottom bg-[#FFFF] w-[100%] py-[24px] flex flex-col justify-center items-center">
-                        <div class="max-w-[1260px] mx-auto px-[20px] mt-[14px] text-[12px] text-center md:w-[60%] pb-[32px]">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                        <div class="max-w-[1260px] mx-auto px-[6px] md:px-[20px] mt-[14px] text-[12px] text-center md:w-[60%] pb-[32px] text-[#303030] md:text-black">
+                            <p class="hidden md:block">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                            <p class="md:hidden block">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</p>
                         </div>
-                        <div class="flex gap-[20px] justify-center items-center pb-[24px]">
-                            <img src="./assets/svg/lets-encrypt.svg" alt="" class="w-[64px]">
-                            <img src="./assets/svg/vtex-pci.svg" alt="" class="w-[64px] ">
+                        <div class="flex gap-[20px] justify-center items-center md:pb-[24px]">
+                            <img src="./assets/svg/lets-encrypt.svg" alt="" class="w-[48px] md:w-[64px]">
+                            <img src="./assets/svg/vtex-pci.svg" alt="" class="w-[48px] md:w-[64px] ">
                             <div class="border-1 border-gray-50 border-opacity-10 h-[24px]"></div>
-                            <img src="./assets/svg/AVANTI-logo.svg" alt="" class="w-[64px]">
-                            <img src="./assets/svg/VTEX_Logo.svg" alt="" class="w-[64px]">
+                            <img src="./assets/svg/AVANTI-logo.svg" alt="" class="w-[48px] md:w-[64px]">
+                            <img src="./assets/svg/VTEX_Logo.svg" alt="" class="w-[48px] md:w-[64px]">
                         </div>
                 </section>
             </div>
