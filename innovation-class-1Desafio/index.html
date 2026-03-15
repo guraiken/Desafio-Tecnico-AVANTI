@@ -48,6 +48,27 @@
             right: -26px !important
         }
 
+        @keyframes searchAnim{
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes arrowToggle{
+            from {
+                opacity: 0.5;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
     </style>
     <title>Innovation Class</title>
 </head>
@@ -79,8 +100,8 @@
         
             <!-- barra de pesquisa -->
             <div class="flex items-center gap-[10px] p-2.5 w-full md:max-w-[550px] border border-[#dddddd] rounded-lg">
-                <input type="text" placeholder="Digite aqui o que você procura" class="border-none outline-none flex-1 px-3 placeholder-black font-normal font-semibold text-sm">
-                <img src="./assets/svg/search.svg" class="pr-2 cursor-pointer" id="search-bar">
+                <input type="text" placeholder="Digite aqui o que você procura" class="border-none outline-none flex-1 px-3 placeholder-black font-normal font-semibold text-sm" id="search-bar">
+                <img src="./assets/svg/search.svg" class="pr-2 cursor-pointer" id="search-event">
             </div>
         
             <!-- usuário + carrinho desktop -->
@@ -114,9 +135,9 @@
 
         <!-- container do "resultado" da pesquisa -->
         
-        <section class="search-result">    
-            <div class="flex flex-col justify-center items-center min-h-[60px] border-t-1 border-[#dddddd] border-opacity-10">
-                <div class="md:max-w-[1200px] mx-auto w-full text-center font-semibold">
+        <section>    
+            <div class="hidden flex-col justify-center items-center min-h-[70px] border-t-1 border-[#dddddd] border-opacity-10" id="search-result-container">
+                <div class="md:max-w-[1200px] mx-auto w-full text-center font-semibold animate-[searchAnim_0.3s_ease-out]">
                     <h4 id="search-result">Você buscou por:</h>
                 </div>
             </div>
@@ -126,11 +147,11 @@
     
     <main>
         <section class="banner-sale w-full bg-[#E7E7EA] md:h-auto">
-            <div class="md:max-w-[1500px] mx-auto flex object-cover md:flex-row items-center justify-center gap-[20px] md:gap-[0px] md:justify-center md:h-auto h-[510px]">
+            <div class="md:max-w-[1500px] mx-auto flex object-cover md:flex-row items-center gap-[20px] md:gap-[0px] md:justify-center md:h-auto h-[310px]">
                 <img src="./assets/Images/cadeira-sale.png" alt="Cadeira com roupas" class="hidden md:block">
                 <img src="./assets/Images/cadeira-sale-mobile.png" alt="Cadeira com roupas" class="w-[50%] max-w-[300px] h-full block md:hidden">
             
-                <div class="flex flex-col items-center text-center pr-[10px] md:pr-0 gap-[30px]">
+                <div class="flex flex-col items-center text-center pr-[10px] md:pr-0 md:gap-[30px] gap-4">
                     <h1 class="flex flex-col text-black leading-[0.9] md:flex-row">
                         <span class="md:text-[60px] text-[40px] lg:text-[100px] font-bold">SUPER</span>
                         <span class="md:text-[60px] text-[40px] lg:text-[100px] font-light">SALE</span>
@@ -154,8 +175,8 @@
             <div class="max-w-[1300px] mx-auto px-[20px]">
 
                 <div class="flex justify-between items-center mt-[24px] pb-[12px]">
-                    <h2 class="text-[20px] font-bold text-black">Lançamentos</h2>
-                    <a href="#" class="text-[14px] text-[#303030] hover:text-[#005cff] transition-colors font-bold">Ver mais</a>
+                    <h2 class="text-4 md-[20px] font-bold text-black">Lançamentos</h2>
+                    <a href="#" class="text-[14px] text-[#303030] hover:text-[#005cff] transition-colors font-bold md:underline-none underline">Ver mais</a>
                 </div>
         
                 <div class="relative w-full max-w-[1300px] mx-auto">
@@ -361,17 +382,37 @@
                         <div class="border-1 border-[#dddddd] border-opacity-10 h-[2px] w-full"></div>
                             <div class="flex justify-between pl-4 pr-5">
                                 <h5 class="font-bold text-base" >Institucional</h5>
-                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3">
+                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3" id="arrow-mobile-1">
+                            </div>
+                            <div class="pl-4 pt-2 hidden flex-col gap-1 text-[#656565] text-[14px] pb-1 animate-[arrowToggle_0.3s_ease-out]" id="mobile-container-institucional">
+                                <h5>Sobre nós</h5>
+                                <h5>Nossas Lojas</h5>
+                                <h5>Privacidade e Segurança</h5>
+                                <h5>Termos e condições</h5>
                             </div>
                         <div class="border-1 border-[#dddddd] border-opacity-10 h-[2px] w-full"></div>
                             <div class="flex justify-between pl-4 pr-5">
                                 <h5 class="font-bold text-base">Central de ajuda</h5>
-                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3">
+                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3" id="arrow-mobile-2">
+                            </div>
+                             <div class="pl-4 pt-2 hidden flex-col gap-1 text-[#656565] text-[14px] pb-1 animate-[arrowToggle_0.3s_ease-out]" id="mobile-container-central">
+                                <h5>Fale Conosco</h5>
+                                <h5>Frete e Entrega</h5>
+                                <h5>Trocas e Devoluções</h5>
+                                <h5>Formas de Pagamento</h5>
+                                <h5>FAQ</h5>
                             </div>
                         <div class="border-1 border-[#dddddd] border-opacity-10 h-[2px] w-full"></div>
                             <div class="flex justify-between pl-4 pr-5">
                                 <h5 class="font-bold text-base">Atendimento</h5>
-                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3">
+                                <img src="./assets/svg/show-more-arrow-mob.svg" alt="" class="w-3" id="arrow-mobile-3">
+                            </div>
+                             <div class="pl-4 pt-2 hidden flex-col gap-1 text-[#656565] text-[14px] pb-1 animate-[arrowToggle_0.3s_ease-out]" id="mobile-container-atendimento">
+                                <h5><strong>Telefone:</strong> (00) 1234-5678</h5>
+                                <h5><strong>Email:</strong> exemplo@exemplo.com</h5>
+                                <h5 class="font-bold text-[12px]">Horário de atendimento:</h5>
+                                <p class="text-[12px]">Segunda a Sábado: 07h00 às 23h00</p>
+                                <p class="text-[12px]">Domingos a Feriados: 07h00 às 21h00</p>
                             </div>
                         <div class="border-1 border-[#dddddd] border-opacity-10 h-[2px] w-full"></div>
                     </div>
