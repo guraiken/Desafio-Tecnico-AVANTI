@@ -16,8 +16,35 @@ const mobile = {
     arrowAtendimento: document.getElementById("arrow-mobile-3"),
     containerInstitucional: document.getElementById("mobile-container-institucional"),
     containerCentral: document.getElementById("mobile-container-central"),
-    containerAtendimento: document.getElementById("mobile-container-atendimento")
+    containerAtendimento: document.getElementById("mobile-container-atendimento"),
+
+    mobileDepartment1: document.getElementById('mobile-department-1'),
+    mobileDepartment2: document.getElementById('mobile-department-2'),
+    mobileDepartment3: document.getElementById('mobile-department-3'),
+    arrowDepartment1: document.getElementById('arrow-dept-1'),
+    arrowDepartment2: document.getElementById('arrow-dept-2'),
+    arrowDepartment3: document.getElementById('arrow-dept-3')
 }
+
+//cards para o swiper
+const container = document.getElementById("card-container");
+const container2 = document.getElementById("card-container-2");
+
+// parte de suporte do footer
+const magnifier = document.getElementById("search-event")
+const searchBar = document.getElementById("search-bar")
+const searchResult = document.getElementById("search-result")
+const containerDisplay = document.getElementById("search-result-container")
+
+// parte da navbar e menus desktop
+const dropMenu = document.getElementById("drop-menu")
+const dropMenuContainer = document.getElementById("drop-menu-container")
+const departments = document.querySelectorAll('.department')
+const navDepartment = document.querySelectorAll('.nav-department')
+const categoryMenu = document.getElementById('category-menu')
+const departmentMenu = document.getElementById('simple-menu')
+
+start()
 
 function createCard(produto) {
     return `
@@ -65,19 +92,24 @@ function createCard(produto) {
     `;
 }
 
-start()
-
 function start() {
     mobileArrowToggle(mobile.arrowInstitucional, mobile.containerInstitucional)
     mobileArrowToggle(mobile.arrowCentral, mobile.containerCentral)
     mobileArrowToggle(mobile.arrowAtendimento, mobile.containerAtendimento)
+    mobileArrowToggle(mobile.arrowDepartment1, mobile.mobileDepartment1)
+    mobileArrowToggle(mobile.arrowDepartment2, mobile.mobileDepartment2)
+    mobileArrowToggle(mobile.arrowDepartment3, mobile.mobileDepartment3)
 }
 
 function closeMobileContainers(){
     mobile.containerInstitucional.style.display = 'none'
     mobile.containerCentral.style.display = 'none'
     mobile.containerAtendimento.style.display = 'none'
+    mobile.mobileDepartment1.style.display = 'none'
+    mobile.mobileDepartment2.style.display = 'none'
+    mobile.mobileDepartment3.style.display = 'none'
 }
+
 
 function mobileArrowToggle(arrow, container){
     arrow.addEventListener("click", () => {  
@@ -87,17 +119,25 @@ function mobileArrowToggle(arrow, container){
         if (!isOpen) {
             container.style.display = 'flex'
     }
-    })
-
-    
+    })    
 }
 
-const container = document.getElementById("card-container");
-const container2 = document.getElementById("card-container-2");
-const magnifier = document.getElementById("search-event")
-const searchBar = document.getElementById("search-bar")
-const searchResult = document.getElementById("search-result")
-const containerDisplay = document.getElementById("search-result-container")
+function closeAllMenus() {
+    categoryMenu.classList.add('hidden');
+    departmentMenu.classList.add('hidden');
+    dropMenuContainer.classList.add('hidden');
+    categoryMenu.style.display = ''; 
+    departmentMenu.style.display = '';
+
+    navDepartment.forEach(d => {
+        d.classList.remove("text-[#005cff]");
+        d.classList.add("text-[#000000]"); 
+    });
+    
+    departments.forEach(d => {
+        d.classList.remove("text-[#005cff]");
+    });
+}
 
 //resumo da função: muda o tipo de display pra ficar visivel, seta o innerHTML como "você buscou por:" e aí sim concatena. Pra evitar concatenação infinita da pesquisa conforme clica
 function fakeSearch(){
@@ -112,13 +152,78 @@ magnifier.addEventListener('click', fakeSearch)
 
 //esse escuta o enter quando você digita
 searchBar.addEventListener('keypress', (event) => {
-    if(event.key === "Enter") fakeSearch()
+    if(event.key === "Enter") {
+        if(searchBar.value.trim() === ""){
+            return
+        }else {
+            closeAllMenus()
+            fakeSearch()
+        }
+    }
 })
 
 products.forEach(produto => {
     container.innerHTML += createCard(produto)
     container2.innerHTML+= createCard(produto)
 })
+
+const isMobile = () => window.innerWidth < 1024;
+const isDesktop = () => window.innerWidth > 1024
+
+// menu da navbar mobile
+const burguerButtton = document.getElementById('burguer-button-mobile')
+const mobileDepartment = document.getElementById('mobile-department-container')
+
+
+burguerButtton.addEventListener('click',  ()=> {
+    if(isDesktop()) return
+    
+    mobileDepartment.classList.toggle('hidden')
+    closeMobileContainers()
+})
+
+// ---------------------------------------------------------------------------------------
+
+// escutas de evento dos menus desktop
+dropMenu.addEventListener("mouseenter", () => {
+    if(isMobile()) return
+    
+    closeAllMenus(); 
+    dropMenuContainer.classList.remove("hidden");
+});
+
+departments.forEach(department => {
+    department.addEventListener("mouseenter", () => {
+        if(isMobile()) return
+        departments.forEach(d => {
+            d.classList.remove("text-[#005cff]");
+            d.classList.add("text-[#303030]"); 
+        });
+        department.classList.remove("text-[#303030]");
+        department.classList.add("text-[#005cff]");
+
+        categoryMenu.classList.remove("hidden");
+    });
+});
+
+navDepartment.forEach(department => {
+    department.addEventListener("mouseenter", () => {
+        if(isMobile()) return
+
+        closeAllMenus();
+        departmentMenu.classList.remove('hidden');
+        navDepartment.forEach(d => {
+            d.classList.remove("text-[#005cff]");
+            d.classList.add("text-[#000000]"); 
+        });
+        department.classList.add("text-[#005cff]");
+        department.classList.remove("text-[#000000]");
+    });
+});
+// ---------------------------------------------------------------------------------------
+
+dropMenuContainer.addEventListener("mouseleave", closeAllMenus);
+departmentMenu.addEventListener("mouseleave", closeAllMenus);
 
 const swiper1 = new Swiper('.swiper-1', {
   slidesPerView: 2,
