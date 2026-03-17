@@ -1,13 +1,13 @@
 const products = [
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
-    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
+    {tag: "NOVO", nome: "Lorem Impsum dolor sit amet consectetuer adipiscing elit", precoAntes: "100,00", precoDepois: "79,90", parcela: "10x de R$ 7,90", desconto: "10% OFF", img: "./assets/images/homem-mock.png"},
 ]
 
 const mobile = {
@@ -49,8 +49,8 @@ start()
 function createCard(produto) {
     return `
     <div class="swiper-slide h-auto">
-        <div class="flex flex-col h-full p-[8px] border border-[#dddddd] rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
-            <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-white text-[10px] text-center font-bold px-[6px] py-[2px] rounded-[4px] z-10">
+        <div class="flex flex-col min-h-[365px] md:min-h-[400px] p-[8px] border border-[#dddddd] rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
+            <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-white text-sm text-center font-regular px-[6px] py-[2px] rounded-[4px] z-10 text-[#303030]">
                 ${produto.tag}
             </span>
 
@@ -58,7 +58,7 @@ function createCard(produto) {
                 <img src="${produto.img}" alt="${produto.nome}" class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300">
             </div>
 
-            <h3 class="text-[14px] text-[#303030] leading-snug mb-[10px] line-clamp-2">
+            <h3 class="text-[14px] text-[#303030] leading-snug mb-[10px]">
                 ${produto.nome}
             </h3>
 
@@ -74,13 +74,13 @@ function createCard(produto) {
                         </span>
                     </div>
 
-                    <span class="bg-[#5EC0BE] text-white text-[11px] font-bold px-[6px] py-[4px] rounded-[4px] leading-none underline self-center">
+                    <span class="bg-[#5EC0BE] text-white text-[11px] font-bold ml-2 mb-2 px-2 py-[4.5px]  md:m-0 md:px-[10px] md:py-[6px] rounded-[4px] leading-none md:underline self-center">
                         ${produto.desconto}
                     </span>
                 </div>
 
-                <span class="block text-[11px] text-[#303030] mt-[6px]">
-                    Ou em até <strong class="text-black font-semibold">${produto.parcela}</strong>
+                <span class="block text-xs text-[#303030] mt-[6px]">
+                    Ou em até <strong class="text-[#303030] font-bold">${produto.parcela}</strong>
                 </span>
             </div>
 
