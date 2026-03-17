@@ -50,7 +50,7 @@ function createCard(produto) {
     return `
     <div class="swiper-slide h-auto">
         <div class="flex flex-col min-h-[365px] md:min-h-[400px] p-[8px] border border-[#dddddd] rounded-[8px] hover:shadow-lg transition-shadow bg-white relative group">
-            <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-white text-sm text-center font-regular px-[6px] py-[2px] rounded-[4px] z-10 text-[#303030]">
+            <span class="absolute top-[8px] left-[8px] bg-[#00264E] text-white md:text-[10px] text-center font-regular px-[6px] py-[2px] rounded-[4px] z-10 text-[#303030]">
                 ${produto.tag}
             </span>
 
@@ -178,8 +178,13 @@ const mobileDepartment = document.getElementById('mobile-department-container')
 burguerButtton.addEventListener('click',  ()=> {
     if(isDesktop()) return
     
+    burguerButtton.classList.add('animate-[burguerToggle_0.3s_ease-out]')
     mobileDepartment.classList.toggle('hidden')
     closeMobileContainers()
+
+    burguerButtton.addEventListener('animationend', () => {
+        burguerButtton.classList.remove('animate-[burguerToggle_0.3s_ease-out]');
+    }, { once: true });
 })
 
 // ---------------------------------------------------------------------------------------
